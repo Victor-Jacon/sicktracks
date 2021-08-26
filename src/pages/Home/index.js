@@ -10,7 +10,6 @@ import Pagination from '../../components/Pagination';
 import Header from '../../components/Header';
 
 // Icones e Estilos
-import '../../index.css'
 import { BsSearch } from 'react-icons/bs'
 
 const Home = ({ match }) => {
