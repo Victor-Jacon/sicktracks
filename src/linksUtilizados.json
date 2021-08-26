@@ -1,0 +1,18 @@
+{
+  "Informações do Projeto": {
+    "Como usar o hook useRef para pegar a referência de uma div, ao invés de usarmos o getElementById?":"https://www.youtube.com/watch?v=_H8bMUOA5Vw&ab_channel=DevPleno",
+    "Como tocar um audio ao clicar em um botão usando React? ":"https://github.com/goldfire/howler.js#documentation",
+    "Link de tutorial da lib Howler": "https://www.youtube.com/watch?v=ZYy8w5QmdbM&ab_channel=Arslan",
+    "Como converter de segundos para HH-MM-SS": "https://stackoverflow.com/questions/1322732/convert-seconds-to-hh-mm-ss-with-javascript",
+    "Como desabilitar um botão após o clique": "https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp",
+    "Quero atualizar o estado durante o onChange de um input. Como eu faço pra atualizar e ver o estado sendo atualizado instantaneamente na tela?": "https://www.youtube.com/watch?v=IkMND33x0qQ&ab_channel=TheNetNinja",
+    "Como fazer meu botão de pesquisa enviar o dado pesquisado na barra de pesquisa?":"Usando form action + input type submit + input type text. Fonte: https://www.w3schools.com/html/html_form_input_types.asp",
+    "Como acessar o valor de uma option selecionada em um select do react?": "useState + onChange(e) Fonte: https://stackoverflow.com/questions/29108779/how-to-get-selected-value-of-a-dropdown-menu-in-reactjs",
+    "Como migrar seu projeto pra usar o routes.js ao invés do index.js padrão do react?":"02:19:00 Link: https://www.youtube.com/watch?v=8AoHtNWtT-c&t=7453s&ab_channel=OIrm%C3%A3omaisVelho",
+    "(bug) O usuário digita na pesquisa. O que foi pesquisado é enviado por dispatch para meu redux saga. Meu redux saga não efetua a requisição corretamente. Já tirei o parâmetro dinâmico e tentei fazer uma requisição estática, e deu certo. Mas quando eu coloco o parâmetro dinâmico, para de funcionar. O que fazer?":"Neste caso o redux saga pode não estar recebendo o objeto, ou o objeto pode não estar sendo enviado, precisa testar os dois com console.log. Verifiquei que o redux saga está recebendo a pesquisa do usuário como objeto, e não como string, pq a busca do usuário se transforma em um objeto com parâmetro de busca + type da action. O nosso dispatch manda desta forma. É a arquitetura do dispatch.",
+    "Como concatenar usando template strings?":"https://pt.stackoverflow.com/questions/231359/qual-a-forma-correta-de-concatenar-strings-em-javascript",
+    "Como realizar uma busca dentro de uma array de objetos JSON?":"https://www.youtube.com/watch?v=mZvKPtH9Fzo&t=611s&ab_channel=PedroTech",
+    "Como fazer paginação infinita?":"https://www.youtube.com/watch?v=NZKUirTtxcg&ab_channel=WebDevSimplified",
+    "Como fazer paginação comum em react?":"https://www.youtube.com/watch?v=IYCa1F-OWmk&ab_channel=TraversyMedia"
+  }
+}
