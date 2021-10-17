@@ -307,6 +307,7 @@ p, a, ul, li,h1,h2,h3, input {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .pagination li {

@@ -15,9 +15,8 @@ const Pagination = ({ tracksPerPage, totalTracks, paginate }) => {
     <nav>
       <ul className="pagination">
         {pageNumbers.map(number => (
-          <li key={number} className="page-item">
-            <a className="page-link"
-            onClick={() => paginate(number)}>
+          <li key={number} className="page-item" onClick={() => paginate(number)}>
+            <a className="page-link" onClick={() => paginate(number)}>
               {number}
             </a>
           </li>

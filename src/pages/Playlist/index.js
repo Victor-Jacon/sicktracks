@@ -21,8 +21,6 @@ const Playlist = ({ match }) => {
 
   // Armazena o que o usuário digitou (useState + onChange)
   const [search, setSearch] = useState('');
-
-  // Armazena o que o usuário selecionou (useState + onChange)
   const [searchOption, setSearchOption] = useState('título');
 
   // Realiza a primeira busca para já ter o que mostrar pro usuário quando ele abrir o app pela primeira vez.

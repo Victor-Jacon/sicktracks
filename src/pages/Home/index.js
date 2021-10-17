@@ -26,7 +26,7 @@ const Home = ({ match }) => {
   /* Paginação 1 - Acredito que se no retorno da requisição forem mais de 100 objetos, o ideal é fazer várias requisições separadas.
   Neste caso aqui eu fiz uma requisição só, e fiz a paginação somente no front mesmo, supondo baixo volume da dados. */
   const [currentPage, setCurrentPage] = useState(1);
-  const [tracksPerPage, setTracksPerPage] = useState(6);
+  const [tracksPerPage, setTracksPerPage] = useState(20);
   const indexOfLastTrack = currentPage * tracksPerPage;
   const indexOfFirstTrack = indexOfLastTrack - tracksPerPage;
   const currentTracks = tracks.slice(indexOfFirstTrack, indexOfLastTrack)
@@ -38,6 +38,7 @@ const Home = ({ match }) => {
   // Realiza a primeira busca para já ter o que mostrar pro usuário quando ele abrir o app pela primeira vez.
   useEffect(() => {
     if (match.params.search) {
+      // console.log('1-dispatch da action userSearchTracks match.params.search: ', match.params.search)
       dispatch(userSearchTracks(match.params.search));
     }
     else {

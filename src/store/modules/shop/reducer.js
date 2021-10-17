@@ -19,6 +19,7 @@ function shop (state = INITIAL_STATE, action) {
     // Buscando 11 - aqui pega os dados da requisição e atualiza no objeto tracks
     case types.SET_USER_SEARCH_TRACKS: {
       return produce(state, (draft) => {
+          // console.log('5-Reducer: atualizando o estado para renderizar na tela')
           draft.tracks = action.tracks;
       })
     }

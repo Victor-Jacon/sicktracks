@@ -26,7 +26,7 @@ const TrackComponent = ({ tracks }) => {
   // Após o clique, desativa o botão de play.
   const soundPlay = (src) => {
     setBtnPreview(true);
-    console.log(btnPreview)
+    // console.log(btnPreview)
     const tracks = new Howl ({
       src,
       html5: true,
@@ -35,7 +35,7 @@ const TrackComponent = ({ tracks }) => {
       }
     })
     tracks.play()
-    console.log(tracks);
+    // console.log(tracks);
   }
 
   // Decidi deixar as horas pra caso for um podcast longo.
