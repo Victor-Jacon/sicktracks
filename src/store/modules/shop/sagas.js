@@ -1,6 +1,6 @@
-import { takeLatest, all, call, put, select } from 'redux-saga/effects' /* USUÁRIO BUSCANDO 2 */
+import { takeLatest, all, call, put } from 'redux-saga/effects' /* USUÁRIO BUSCANDO 2 */
 import types from './types'; /* USUÁRIO BUSCANDO 4 */
-import { api, homeFetch, searchFetch } from '../../../services/api' // USUÁRIO BUSCANDO 7
+import { api, homeFetch } from '../../../services/api' // USUÁRIO BUSCANDO 7
 import { setHomeTracks, setUserSearchTracks } from './actions' // USUÁRIO BUSCANDO 10 - vamos enviar os dados para o reducer usando a action de atualização + método put do redux saga.
 
 /* ##### SERVERLESS ##### */

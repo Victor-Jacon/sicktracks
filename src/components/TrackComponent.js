@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState} from 'react'
 
 // Favorite Track 5
 import { useDispatch, useSelector } from 'react-redux'
@@ -8,10 +8,10 @@ import '../styles/global.css'
 // Icons
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai'
 import { BsPlay } from 'react-icons/bs'
-import { SiDeezer, SiStatuspage } from 'react-icons/si'
+import { SiDeezer } from 'react-icons/si'
 
 // others
-import { Howl, Howler } from 'howler';
+import { Howl } from 'howler';
 
 const TrackComponent = ({ tracks }) => {
 
@@ -68,7 +68,7 @@ const TrackComponent = ({ tracks }) => {
             <SiDeezer/>
           </a>
         </div>
-        <img className="deezer-track-photo" src={ tracks.album.cover_medium }/>
+        <img className="deezer-track-photo" src={ tracks.album.cover_medium } alt="the album cover of each song"/>
         <ul className="track-info">
           <li>{ wordLimiter(tracks.title) }</li>
           <li>{ wordLimiter(tracks.artist.name) }</li>

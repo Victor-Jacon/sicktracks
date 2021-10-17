@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { homeTracks, userSearchTracks } from '../../store/modules/shop/actions'
 
 // Components
@@ -26,7 +25,7 @@ const Home = ({ match }) => {
   /* Paginação 1 - Acredito que se no retorno da requisição forem mais de 100 objetos, o ideal é fazer várias requisições separadas.
   Neste caso aqui eu fiz uma requisição só, e fiz a paginação somente no front mesmo, supondo baixo volume da dados. */
   const [currentPage, setCurrentPage] = useState(1);
-  const [tracksPerPage, setTracksPerPage] = useState(20);
+  const [tracksPerPage] = useState(20);
   const indexOfLastTrack = currentPage * tracksPerPage;
   const indexOfFirstTrack = indexOfLastTrack - tracksPerPage;
   const currentTracks = tracks.slice(indexOfFirstTrack, indexOfLastTrack)
@@ -44,7 +43,7 @@ const Home = ({ match }) => {
     else {
       dispatch(homeTracks());
     }
-  }, [])
+  }, [dispatch, match.params.search])
 
   return (
     <div className="estrutura">
@@ -82,13 +81,15 @@ const Home = ({ match }) => {
             {currentTracks.filter((currentTracks) => {
 
             // Retorna tudo
-            if (searchOption == "título") return currentTracks
+            if (searchOption === "título") return currentTracks
             
             // Retorna somente os que o nome do album contém o termo pesquisado
-            else if (searchOption == "album" && currentTracks.album.title.toLowerCase().includes(search.toLowerCase())) return currentTracks
+            else if (searchOption === "album" && currentTracks.album.title.toLowerCase().includes(search.toLowerCase())) return currentTracks
            
             // Retorna somente os que o nome do artista contém o termo pesquisado
-            else if (searchOption == "artista" && currentTracks.artist.name.toLowerCase().includes(search.toLowerCase())) return currentTracks
+            else if (searchOption === "artista" && currentTracks.artist.name.toLowerCase().includes(search.toLowerCase())) return currentTracks
+
+            return null
 
             }).map((currentTracks) => (
               <TrackComponent tracks={currentTracks}/>
